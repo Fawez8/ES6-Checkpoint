@@ -7,17 +7,9 @@ let pets = [
 const  getAge = (pet) => {
     return new Date().getFullYear() - pet.bornOn;
 }
+pets.forEach(item=> item.age = getAge(item))
 
-  let petsWithAge = [];
-  for (let i of pets) {
-    let pet = pets[i];
-    pet.age = getAge(pet);
-  
-    petsWithAge.push(pet);
-  } // ici j'utilise map ,nn??
-  console.log(petsWithAge);
-
-  let dog = pets.filter(pet =>(pet.type = "dog"))
+ let dog = pets.filter(pet =>(pet.type = "dog"))
   console.log(dog);
   
 
